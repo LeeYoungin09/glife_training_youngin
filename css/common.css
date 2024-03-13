@@ -1,0 +1,188 @@
+@charset 'utf-8';
+@import url(./my_reset.css);
+@font-face {
+  font-family: "S-CoreDream-3Light";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* align-content: space-between; */
+/* justify-content: ; */
+/* transform: translateX(-10%); */
+/* align-content: space-between; */
+/* text-align: center; */
+
+:root {
+  color: black;
+  /* point color 
+  main color
+  font color
+  system color
+  gap size */
+  font-size: 16px;
+}
+
+body {
+}
+
+.hd {
+  max-width: 1440px;
+  width: calc(100% - 3rem);
+  height: 100px;
+  margin: auto;
+  /* 마진값 중요!! */
+  border: 1px solid red;
+  display: flex;
+  position: relative;
+
+  z-index: 999;
+  /* 가장 상단에 메뉴 보이기 */
+}
+/* 
+font-family: "Font Awesome 6 Free";
+font-weight: 900;
+Solid → 900
+Regular, Brands → 400
+Light → 300
+ */
+
+.hd .main_logo {
+  border: 1px solid blue;
+  width: 150px;
+}
+
+/* 상단메뉴 */
+
+.hd .menu {
+  margin: auto;
+  display: flex;
+}
+
+.hd .menu > * {
+  padding: 1rem;
+}
+
+.hd .menu > a {
+  /* 메뉴 요소를 오른쪽 정렬해야 하는데 안됨 */
+}
+
+.hd .sub {
+  display: block;
+  flex-direction: column;
+  min-width: 120px;
+  position: absolute;
+  /* 부유시키기 */
+
+  visibility: hidden;
+}
+
+.hd .menu:hover .sub {
+  visibility: visible;
+}
+
+.hd .menu li:hover > a {
+  color: blue;
+}
+/* li 메뉴 호버시 a박스의 폰트가 변경됨 */
+
+/* 수직정렬 */
+/* 
+.hd .menu .sub > li a {
+  vertical-align: middle;
+}
+.hd .menu .sub > li a::after {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  opacity: 0;
+  transition: 0.3s;
+  margin-left: 1rem;
+}
+.hd .menu .sub > li a:hover::after {
+  opacity: 1;
+  margin-left: 2rem;
+}
+서브메뉴 오른쪽 점효과인데 적용안됨 
+*/
+
+.hd .but {
+  margin: auto;
+}
+
+/* 메뉴하단 대형이미지 */
+
+.main2 {
+  display: flex;
+  max-width: 1440px;
+  width: calc(100% - 3rem);
+  height: 500px;
+  margin: auto;
+  border: 1px solid red;
+  position: relative;
+}
+
+.main2 .swiper-slide {
+  border: 5px solid rgb(0, 255, 191);
+}
+
+.main2 .swiper-slide img {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  /* 이미지 중앙정렬 */
+  width: 80%;
+  /* swiper에 기본 relative 값 적용된 상태 */
+}
+.main2 .swiper-wrapper .swiper-slide h3 > * {
+  position: absolute;
+  z-index: 100;
+  padding: 1rem;
+}
+
+.main2 .swiper .swiper-wrapper .swiper-slide h3 > strong {
+  left: 5%;
+  top: 10%;
+  padding: 1rem;
+}
+
+.main2 .swiper .swiper-wrapper .swiper-slide h3 > span {
+  left: 5%;
+  top: 15%;
+  padding: 1rem;
+  /* 스와이퍼 단추가 왼쪽 정렬이 안됨 */
+}
+
+.main2 .swiper-pagination {
+  margin-left: 5%;
+  bottom: 15%;
+}
+
+.main2 .mid_menu {
+  position: absolute;
+  z-index: 999;
+
+  width: 800px;
+  padding: 1rem;
+  bottom: -5%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: auto;
+  text-align: center;
+
+  background-color: gainsboro;
+}
+
+.mid_menu a {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.mid_menu > a > i:hover::before {
+  margin-left: 5px;
+  transition: 0.8s;
+}
